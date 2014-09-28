@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mode"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="17" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.LOCATION_HARDWARE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <permission android:name="com.example.mode.permission.MAPS_RECEIVE"></permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <meta-data 
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyA2QnzGnyDY8Sb00bqkHyx7aX44J9pR9u4"/>
+        <meta-data 
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <activity
+            android:name="com.example.mode.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.mode.PlaceActivity"></activity>
+        <activity android:name="com.example.mode.TimeActivity"></activity>
+        <activity android:name="com.example.mode.TimeSetting"></activity>
+        <activity android:name="com.example.mode.ConnectActivity"></activity>
+        <activity android:name="com.example.mode.GoogleMapActivity"></activity>
+        <activity android:name="com.example.mode.Table"></activity>
+        
+        <receiver android:name="com.example.mode.Alarm"></receiver>
+    </application>
+
+</manifest>
